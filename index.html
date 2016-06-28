@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Seaweed by DanVane</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/DanVane/Seaweed">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/DanVane/Seaweed/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/DanVane/Seaweed/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Seaweed</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/DanVane">DanVane</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="seaweed-北理工研究生数据挖掘作业一数据探索性分析与预处理" class="anchor" href="#seaweed-%E5%8C%97%E7%90%86%E5%B7%A5%E7%A0%94%E7%A9%B6%E7%94%9F%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%BD%9C%E4%B8%9A%E4%B8%80%E6%95%B0%E6%8D%AE%E6%8E%A2%E7%B4%A2%E6%80%A7%E5%88%86%E6%9E%90%E4%B8%8E%E9%A2%84%E5%A4%84%E7%90%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Seaweed 北理工研究生数据挖掘作业一：数据探索性分析与预处理</h1>
+
+<p>海藻数据的分析
+1. 问题描述</p>
+
+<p>某些高浓度的有害藻类对河流生态环境的破坏是一个严重的问题。它们不仅破坏河流的生物，也破坏水质。能够监测并在早期对海藻的繁殖进行预测对提高河流质量是很有必要的。</p>
+
+<p>针对这一问题的预测目标，在大约一年的时间内，在不同时间内收集了欧洲多条河流的水样。对于每个水样，测定了它们的不同化学性质以及7种有害藻类的存在频率。在水样收集过程中，也记录了一些其他特性，如收集的季节、河流大小和水流速度。
+2. 数据说明</p>
+
+<p>Analysis.txt</p>
+
+<p>有200个水样，每条记录是同一条河流在该年的同一个季节的三个月内收集的水样的平均值。</p>
+
+<p>每条记录由11个变量构成，3个是标称变量，分别描述水样收集的季节，河流大小和河水速度，剩下的8个变量是水样的化学参数：</p>
+
+<pre><code>最大pH值(mxPH)
+最小含氧量(mnO2)
+平均氯化物含量(Cl)
+平均硝酸盐含量(NO3)
+平均氨含量(NH4)
+平均正磷酸盐含量(oPO4)
+平均磷酸盐含量(PO4)
+平均叶绿素含量(Chla)
+</code></pre>
+
+<p>a1-a7为7种不同有害藻类在相应水样中的频率数目。
+3. 数据分析要求
+3.1 数据可视化和摘要
+数据摘要</p>
+
+<pre><code>对标称属性，给出每个可能取值的频数，
+数值属性，给出最大、最小、均值、中位数、四分位数及缺失值的个数。
+</code></pre>
+
+<p>数据的可视化</p>
+
+<p>针对数值属性，</p>
+
+<pre><code>绘制直方图，如mxPH，用qq图检验其分布是否为正态分布。
+绘制盒图，对离群值进行识别
+</code></pre>
+
+<p>对7种海藻，分别绘制其数量与标称变量，如size的条件盒图
+3.2 数据缺失的处理</p>
+
+<p>分别使用下列四种策略对缺失值进行处理:</p>
+
+<pre><code>将缺失部分剔除
+用最高频率值来填补缺失值
+通过属性的相关关系来填补缺失值
+通过数据对象之间的相似性来填补缺失值
+</code></pre>
+
+<p>处理后，可视化地对比新旧数据集。</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
